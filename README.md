@@ -1,1 +1,3 @@
-# techno_records
+# Techno Records
+
+Fun project to learn React.js

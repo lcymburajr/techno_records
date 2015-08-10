@@ -1,0 +1,194 @@
+@import "compass/css3";
+
+// Fonts and Colors
+@import url(http://fonts.googleapis.com/css?family=Orbitron:400,700|Roboto);
+$orbitron: 'Orbitron', sans-serif;
+$Roboto: 'Roboto', sans-serif;
+
+$navbarBackgound: #000;
+$headerColor: #fff;
+$newsHeaderColor: #d4d0c5;
+$paragraphColor: #fff;
+$footerParagraphColor: #000;
+
+$featureSongColor: #fff;
+$footerBackground: #d4d0c5;
+$technoBlue: #0ed6f8;
+$technoPink: #e51ea7;
+
+//Page Structure
+* {
+  margin: 0;
+}
+
+html, body {
+  background: #000;
+}
+
+h1 {
+  font-size: 30px;
+  font-family: $orbitron;
+  color: $headerColor;
+}
+
+// Nav
+.navbar {
+  min-height: 80px;
+  background: $navbarBackgound;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  margin-top: 15px;
+}
+
+.navbar-toggle {
+  margin-top: 25px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  font-family: $orbitron;
+  color: #fff;
+  &:hover {
+    color: $technoBlue;
+  }
+}
+
+.navbar-brand  {
+  padding-top: 15px;
+  .logo {
+    height: 50px;
+  }
+}
+
+// Hero Image
+.hero-image {
+  background: #ccc;
+  width: 100%;
+  height: 500px;
+  background: image-url("deadmau5_hero.jpg") 0 0 no-repeat;
+  @include background-size(cover);
+  @media screen and (max-width: 645px) {
+    height: 400px;
+  }
+  @media screen and (max-width: 500px) {
+    height: 300px;
+  }
+  @media screen and (max-width: 360px) {
+      height: 250px;
+    }
+  .hero-image-text {
+    margin-top: 200px;
+    @media screen and (max-width: 645px) {
+       margin-top: 150px;
+    }
+    @media screen and (max-width: 500px) {
+      margin: 0 auto;
+      margin-top: 100px;
+    }
+  }
+}
+
+//Featured Song
+.featured-song {
+  button {
+    background: none;
+    border: none;
+    outline: none;
+  }
+  h3 {
+    font-family: $orbitron;
+    font-size: 14px;
+  }
+  hr {
+    margin-top: 30px;
+    border-top: 1px solid #666;
+  }
+}
+
+// News
+.news-container {
+  padding-top: 0px;
+  h1 {
+    margin: 0 10px 0 0;
+  }
+  .news-title {
+    h2 {
+      &:first-of-type {
+        margin-top: 10px;
+      }
+      font-family: $Roboto;
+      font-size: 24px;
+      color: $newsHeaderColor;
+    }
+    p {
+      margin-bottom: 0;
+      color: $paragraphColor;
+      font-family: $Roboto;
+      font-size: 18px;
+    }
+  }
+  a:first-of-type {
+    margin-top: 5px;
+  }
+}
+
+//Tweets
+.tweets-container {
+  padding-left: 30px;
+  @media screen and (max-width: 991px) {
+    padding-left: 0;
+  }
+  @media screen and (max-width: 767px) {
+    padding-right: 100px;
+  }
+  @media screen and (max-width: 400px) {
+    padding-right: 0;
+  }
+  h2 {
+    margin: 0 auto 20px auto  ;
+    font-family: $Roboto;
+    font-size: 18px;
+  }
+  p {
+    margin-bottom: 20px;
+    color: $paragraphColor;
+    font-family: $Roboto;
+    font-size: 18px;
+  }
+}
+
+//Footer
+.footer {
+  margin-top: 50px;
+  background: $footerBackground;
+  width: 100%;
+  p {
+    margin-top: 15px;
+    color: $footerParagraphColor;
+    font-family: $Roboto;
+  }
+  .social-icons {
+    float: right;
+    @media screen and (max-width: 360px) {
+       clear: right;
+       float: left;
+    }
+    img {
+      cursor: pointer;
+      margin: 6px 0 0 10px;
+      width: 35px;
+      @media screen and (max-width: 360px) {
+       margin: 6px 5px 10px 0;
+      }
+    }
+  }
+}
+
+//Color Classes
+.techno-blue {
+  color: $technoBlue;
+}
+
+.techno-pink {
+  color: $technoPink;
+}
