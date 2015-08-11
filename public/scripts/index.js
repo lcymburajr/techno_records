@@ -126,7 +126,7 @@ var TweetsList = React.createClass({
   render: function() {
     var tweetNodes = this.props.data.map(function (tweet, index) {
       return (
-        <Tweet msg={tweet.msg}/>
+        <Tweet msg={tweet.msg} key={index}/>
       );
     });
     return (
@@ -175,7 +175,8 @@ var News = React.createClass({
     return (
       <div className="news-title">
         <h2>{this.props.headline}</h2>
-        <p>{this.props.story}</p>
+        <p>{this.props.children}</p>
+        <a href="" className="techno-pink">more...</a>
       </div>
     );
   }
@@ -185,11 +186,9 @@ var NewsList = React.createClass({
   render: function() {
     var newsNodes = this.props.data.map(function (news, index) {
       return (
-        <div>
-        <News headline={news.headline}/>
-        <News story={news.story}/>
-        <a href="" className="techno-pink">more...</a>
-        </div>
+        <News headline={news.headline} key={index}>
+          {news.story}
+        </News>
       );
     });
     return (
