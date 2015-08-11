@@ -122,7 +122,7 @@ var Footer = React.createClass({
 React.render(
   <div className="content">
     <Header/>
-    <NavBar/>
+    <Navbar/>
     <Container/>
     <Footer/>
   </div>,
