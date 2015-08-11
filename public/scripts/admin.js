@@ -9,7 +9,7 @@ var Header = React.createClass({
   }
 });
 
-var NavBar = React.createClass({
+var Navbar = React.createClass({
   render: function() {
     return (
       <div className="container-fluid admin-nav">
